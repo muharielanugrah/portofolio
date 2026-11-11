@@ -23,8 +23,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
   background-color: var(--color-canvas);
   color: var(--color-text-primary);
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
 }
 
 body {
@@ -374,6 +384,38 @@ p, li {
   .no-print {
     display: none !important;
   }
+}
+
+/* Mobile Touch, Modal & Viewport Polish */
+@media (max-width: 640px) {
+  /* iOS Font-Zoom Prevention on Form Inputs */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  /* Modal Ergonomics for Small Screens */
+  .modal-card {
+    max-height: 92vh;
+    margin: auto 0.75rem;
+    padding: 1.25rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  /* Smooth Momentum Scrolling in Containers */
+  .overflow-y-auto, .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent Long Code Line Overflow */
+  .code-window pre, .code-window code {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+/* Footer Bottom Safe-Area for Modern Notch/Bar Devices */
+footer {
+  padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
 }
 
 /* Accessibility: Respect prefers-reduced-motion */

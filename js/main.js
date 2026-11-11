@@ -175,6 +175,28 @@ function initMobileMenu() {
       document.body.style.overflow = '';
     });
   });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenuPanel.classList.contains('hidden')) {
+      mobileMenuPanel.classList.add('hidden');
+      mobileMenuPanel.classList.remove('flex');
+      menuIcon.className = 'ph ph-list text-base';
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Auto-close when resized to desktop viewport
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768 && !mobileMenuPanel.classList.contains('hidden')) {
+      mobileMenuPanel.classList.add('hidden');
+      mobileMenuPanel.classList.remove('flex');
+      menuIcon.className = 'ph ph-list text-base';
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  }, { passive: true });
 }
 
 /**
