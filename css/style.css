@@ -1,130 +1,94 @@
 /* ==========================================================================
    MUH. ARIEL ANUGRAH — PERSONAL PORTFOLIO
-   Design Direction: Swiss-Inspired Digital Editorial / Technical Case Study
-   Art Direction: Human-crafted, structured grid, high typography contrast
+   Design System & Custom Styles
+   Inspirations: Kamil Ashfaq, DS, PK, BB, MZ, and JR Portfolio References
+   Framework: landing-page-design (Part B Visual System)
    ========================================================================== */
 
 :root {
-  /* Dark Canvas (Ink & Charcoal) */
-  --ink-950: #0B0D11;
-  --ink-900: #11141A;
-  --ink-850: #171B22;
-  --ink-800: #1E232C;
-  --ink-border: #2B313C;
-  --ink-border-subtle: rgba(255, 255, 255, 0.08);
-  --ink-text-primary: #F5F4F0;
-  --ink-text-muted: #8E95A2;
-
-  /* Warm Light Canvas (Architectural Paper) */
-  --paper-50: #FAF8F5;
-  --paper-100: #F4F1EA;
-  --paper-200: #EBE6DC;
-  --paper-border: #DCD6C9;
-  --paper-border-subtle: rgba(0, 0, 0, 0.08);
-  --paper-text-primary: #14171C;
-  --paper-text-muted: #626875;
-
-  /* Restrained Accents */
-  --accent-tech: #0284C7;
-  --accent-tech-dark: #0369A1;
-  --accent-gold: #B45309;
-  --accent-gold-dark: #92400E;
-  --accent-gold-light: #D97706;
-
-  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --color-canvas: #060A12;
+  --color-canvas-alt: #080D1A;
+  --color-surface-base: #0F172A;
+  --color-surface-elevated: #1E293B;
+  --color-border: #334155;
+  --color-border-glow: #38BDF8;
+  --color-electric: #38BDF8;
+  --color-electric-hover: #0EA5E9;
+  --color-cta: #2563EB;
+  --color-cta-hover: #1D4ED8;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --ease-base: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
-  background-color: var(--ink-950);
-  color: var(--ink-text-primary);
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
   -webkit-text-size-adjust: 100%;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
-  box-sizing: border-box;
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--ink-950);
-  color: var(--ink-text-primary);
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   position: relative;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Scale & Editorial Rhythm */
-.font-display {
-  font-family: 'Instrument Serif', Georgia, serif;
+/* Subtle Engineering Vertical Grid Lines (Ref: BB Portfolio) */
+.engineering-grid {
+  background-image: linear-gradient(to right, rgba(51, 65, 85, 0.12) 1px, transparent 1px);
+  background-size: 80px 100%;
 }
 
-.font-sans-editorial {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+/* Ambient Radial Glows (Ref: Kamil Ashfaq & MZ) */
+.hero-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(37, 99, 235, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
 }
 
-.font-mono-code {
-  font-family: 'JetBrains Mono', monospace;
-  font-feature-settings: "zero" 1;
-}
-
+/* Typography Rules */
 em, i, cite, var, address, dfn {
   font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
-  letter-spacing: -0.02em;
 }
 
 p, li {
   text-wrap: pretty;
 }
 
-/* Editorial Hairline Grid Lines */
-.hairline-b {
-  border-bottom: 1px solid var(--ink-border-subtle);
+.font-code {
+  font-family: 'JetBrains Mono', monospace;
 }
 
-.hairline-t {
-  border-top: 1px solid var(--ink-border-subtle);
-}
-
-.hairline-r {
-  border-right: 1px solid var(--ink-border-subtle);
-}
-
-.hairline-l {
-  border-left: 1px solid var(--ink-border-subtle);
-}
-
-.hairline-all {
-  border: 1px solid var(--ink-border-subtle);
-}
-
-/* Light Section Hairline */
-.paper-hairline-b {
-  border-bottom: 1px solid var(--paper-border-subtle);
-}
-
-.paper-hairline-t {
-  border-top: 1px solid var(--paper-border-subtle);
-}
-
-.paper-hairline-all {
-  border: 1px solid var(--paper-border-subtle);
-}
-
-/* Subtle Scroll Reveal */
+/* Scroll Reveal Transitions */
 .reveal-item {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 600ms var(--ease-editorial), transform 600ms var(--ease-editorial);
+  transform: translateY(24px);
+  transition: opacity 700ms var(--ease-base), transform 700ms var(--ease-base);
   will-change: opacity, transform;
 }
 
@@ -133,73 +97,36 @@ p, li {
   transform: translateY(0);
 }
 
-/* Editorial Button Micro-interaction */
-.btn-editorial {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 0.75rem 1.25rem;
-  transition: all 200ms var(--ease-editorial);
-  border-radius: 2px;
+/* Mandatory Tagline Reveal (Part B11) */
+.tagline-word {
+  display: inline-block;
+  color: rgba(248, 250, 252, 0.22);
+  transition: color 450ms var(--ease-base);
+  will-change: color;
 }
 
-.btn-editorial:active {
-  transform: scale(0.98);
+.tagline-word.active {
+  color: #F8FAFC;
 }
 
-.btn-editorial-dark {
-  background-color: #F5F4F0;
-  color: #11141A;
-  border: 1px solid #F5F4F0;
+/* Micro-interactions & Buttons */
+.btn-press {
+  transition: transform 150ms var(--ease-base), background-color 300ms var(--ease-base), border-color 300ms var(--ease-base), box-shadow 300ms var(--ease-base);
 }
 
-.btn-editorial-dark:hover {
-  background-color: #FFFFFF;
-  color: #000000;
+.btn-press:active {
+  transform: scale(0.97);
 }
 
-.btn-editorial-outline {
-  background-color: transparent;
-  color: #F5F4F0;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.btn-press:focus-visible {
+  outline: 2px solid var(--color-electric);
+  outline-offset: 2px;
 }
 
-.btn-editorial-outline:hover {
-  border-color: #F5F4F0;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.btn-editorial-light {
-  background-color: #14171C;
-  color: #FAF8F5;
-  border: 1px solid #14171C;
-}
-
-.btn-editorial-light:hover {
-  background-color: #2B313C;
-}
-
-.btn-editorial-light-outline {
-  background-color: transparent;
-  color: #14171C;
-  border: 1px solid rgba(20, 23, 28, 0.2);
-}
-
-.btn-editorial-light-outline:hover {
-  border-color: #14171C;
-  background-color: rgba(20, 23, 28, 0.04);
-}
-
-/* Nav Link Underline State */
+/* Navigation Highlights */
 .nav-link {
   position: relative;
-  transition: color 200ms ease;
+  transition: color 250ms var(--ease-base);
 }
 
 .nav-link::after {
@@ -208,71 +135,235 @@ p, li {
   bottom: -4px;
   left: 0;
   width: 0;
-  height: 1.5px;
-  background-color: currentColor;
-  transition: width 200ms var(--ease-editorial);
+  height: 2px;
+  background-color: var(--color-electric);
+  transition: width 300ms var(--ease-base);
+  border-radius: 9999px;
 }
 
-.nav-link:hover::after,
+.nav-link.active-nav {
+  color: #38BDF8 !important;
+}
+
 .nav-link.active-nav::after {
   width: 100%;
 }
 
-/* Clean Technical Tables */
-.tech-table {
-  width: 100%;
-  border-collapse: collapse;
+/* Skills Card Glowing Effect (Ref: DS Portfolio) */
+.skill-card {
+  transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base), box-shadow 250ms var(--ease-base);
 }
 
-.tech-table th, .tech-table td {
-  padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--paper-border-subtle);
-  font-size: 0.8125rem;
-  text-align: left;
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 25px -4px rgba(56, 189, 248, 0.35);
 }
 
-.tech-table th {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--paper-text-muted);
-  font-weight: 600;
+.skill-card.featured-glow {
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 20px -2px rgba(56, 189, 248, 0.25);
 }
 
-/* Video Playlist Item Clean State */
-.video-playlist-item {
-  transition: border-color 200ms ease, background-color 200ms ease;
+/* Project Cards Hover (Ref: PK Portfolio) */
+.project-card {
+  transition: transform 300ms var(--ease-base), border-color 300ms var(--ease-base), box-shadow 300ms var(--ease-base);
 }
 
-.video-playlist-item:hover {
-  border-color: var(--accent-gold);
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(56, 189, 248, 0.15);
 }
 
-.video-playlist-item.video-active {
-  border-color: var(--accent-gold) !important;
-  background-color: rgba(180, 83, 9, 0.08) !important;
+/* Interactive Tech Tooltip (Ref: BB Portfolio) */
+.tech-icon-wrapper {
+  position: relative;
 }
 
-/* Modals */
+.tech-icon-wrapper .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  transition: opacity 200ms var(--ease-base), transform 200ms var(--ease-base);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.tech-icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Continuous Horizontal Tech Marquee (Ref: JR Portfolio) */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Terminal Mac Window Mockup (Ref: MZ Portfolio) */
+.code-window {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(56, 189, 248, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-elevated);
+  border-radius: 4px;
+  border: 2px solid var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border);
+}
+
+/* Modal Transition & Backdrop */
 .modal-backdrop {
-  background-color: rgba(11, 13, 17, 0.85);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(6, 10, 18, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .modal-card {
-  transform: translateY(8px);
+  transform: scale(0.96) translateY(12px);
   opacity: 0;
-  transition: transform 250ms var(--ease-editorial), opacity 250ms var(--ease-editorial);
+  transition: transform 300ms var(--ease-base), opacity 300ms var(--ease-base);
+  max-height: 90vh;
 }
 
 .modal-active .modal-card {
-  transform: translateY(0);
+  transform: scale(1) translateY(0);
   opacity: 1;
 }
 
-/* Print Styles */
+/* Modal Content Image Handling */
+#projectModalContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Gallery Card Hover & Lightbox */
+.gallery-card {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base), box-shadow 250ms var(--ease-base);
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.15);
+}
+
+#lightboxImage {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   Experience & Achievements Specialized Styling
+   ========================================================================== */
+
+/* Gold Champion Highlight (7 Juara 1 Awards & Featured Card) */
+.award-gold {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base), box-shadow 250ms var(--ease-base);
+}
+
+.award-gold:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.25);
+}
+
+.award-silver {
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.06) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base);
+}
+
+.award-silver:hover {
+  transform: translateY(-2px);
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+.award-bronze {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.06) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base);
+}
+
+.award-bronze:hover {
+  transform: translateY(-2px);
+  border-color: rgba(180, 83, 9, 0.5);
+}
+
+/* Video Playlist Interactive Cards */
+.video-playlist-item {
+  transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base), background-color 250ms var(--ease-base);
+}
+
+.video-playlist-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.video-playlist-item.video-active {
+  border-color: #38BDF8 !important;
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  box-shadow: 0 0 20px -3px rgba(56, 189, 248, 0.25);
+}
+
+/* ==========================================================================
+   Dual-Focus Hero Cards (Technology vs Marching Band)
+   ========================================================================== */
+.dual-card-tech {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 10, 18, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  transition: transform 300ms var(--ease-base), border-color 300ms var(--ease-base), box-shadow 300ms var(--ease-base);
+}
+
+.dual-card-tech:hover {
+  transform: translateY(-4px);
+  border-color: #38BDF8 !important;
+  box-shadow: 0 20px 45px -12px rgba(56, 189, 248, 0.25);
+}
+
+.dual-card-band {
+  background: linear-gradient(145deg, rgba(20, 24, 38, 0.95) 0%, rgba(10, 14, 24, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  transition: transform 300ms var(--ease-base), border-color 300ms var(--ease-base), box-shadow 300ms var(--ease-base);
+}
+
+.dual-card-band:hover {
+  transform: translateY(-4px);
+  border-color: #F59E0B !important;
+  box-shadow: 0 20px 45px -12px rgba(245, 158, 11, 0.25);
+}
+
+/* Print Styles for Resume Modal */
 @media print {
   body * {
     visibility: hidden !important;
@@ -295,23 +386,39 @@ p, li {
   }
 }
 
-/* Mobile & Touch Ergonomics */
+/* Mobile Touch, Modal & Viewport Polish */
 @media (max-width: 640px) {
+  /* iOS Font-Zoom Prevention on Form Inputs */
   input, select, textarea {
     font-size: 16px !important;
   }
+
+  /* Modal Ergonomics for Small Screens */
   .modal-card {
     max-height: 92vh;
-    margin: auto 0.5rem;
+    margin: auto 0.75rem;
     padding: 1.25rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  /* Smooth Momentum Scrolling in Containers */
+  .overflow-y-auto, .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent Long Code Line Overflow */
+  .code-window pre, .code-window code {
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 }
 
-/* Footer Safe Area */
+/* Footer Bottom Safe-Area for Modern Notch/Bar Devices */
 footer {
-  padding-bottom: calc(2.5rem + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
 }
 
+/* Accessibility: Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
@@ -319,8 +426,19 @@ footer {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  
   .reveal-item {
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
+  }
+  
+  .tagline-word {
+    color: #F8FAFC !important;
+    transition: none !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
   }
 }
