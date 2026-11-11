@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="trophyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#0A101D"/>
+      <stop offset="100%" stop-color="#060A12"/>
+    </linearGradient>
+    <linearGradient id="trophyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="40%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <pattern id="trophyGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#trophyBg)"/>
+  <rect width="800" height="600" fill="url(#trophyGrid)"/>
+
+  <!-- Outer Frame -->
+  <rect x="50" y="40" width="700" height="520" rx="20" fill="#0B132B" stroke="#334155" stroke-width="2"/>
+  <rect x="65" y="55" width="670" height="490" rx="14" fill="#080E1E" stroke="#EAB308" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Trophy Illustration -->
+  <g transform="translate(400, 190)">
+    <!-- Base -->
+    <rect x="-80" y="80" width="160" height="26" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="-60" y="55" width="120" height="25" fill="#0F172A" stroke="#EAB308" stroke-width="1"/>
+    
+    <!-- Stem -->
+    <path d="M -20 55 L -14 15 L 14 15 L 20 55 Z" fill="url(#trophyGold)"/>
+    <ellipse cx="0" cy="15" rx="25" ry="6" fill="#EAB308"/>
+
+    <!-- Cup Body -->
+    <path d="M -55 -60 C -55 20, 55 20, 55 -60 Z" fill="url(#trophyGold)"/>
+    <ellipse cx="0" cy="-60" rx="55" ry="12" fill="#FDE047"/>
+
+    <!-- Handles -->
+    <path d="M -55 -45 C -90 -45, -90 0, -45 5" fill="none" stroke="url(#trophyGold)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 55 -45 C 90 -45, 90 0, 45 5" fill="none" stroke="url(#trophyGold)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Star on Cup -->
+    <path d="M0 -32 L3 -22 L13 -22 L5 -16 L8 -6 L0 -12 L-8 -6 L-5 -16 L-13 -22 L-3 -22 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="400" y="340" font-family="'JetBrains Mono', monospace" font-size="12" fill="#EAB308" font-weight="600" text-anchor="middle" letter-spacing="4">CHAMPIONSHIP HONORS</text>
+  <text x="400" y="380" font-family="'Manrope', sans-serif" font-size="26" fill="#FFFFFF" font-weight="700" text-anchor="middle">FOTO TROFI &amp; MEDALI</text>
+  <text x="400" y="415" font-family="'Manrope', sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle">Dokumentasi Trofi Juara Umum, Medali Emas, &amp; Penghargaan Fisik</text>
+
+  <!-- Slot Info -->
+  <rect x="220" y="445" width="360" height="60" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="472" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FDE047" font-weight="600" text-anchor="middle">SLOT DOKUMENTASI TROFI &amp; MEDALI</text>
+  <text x="400" y="492" font-family="'Manrope', sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Siap diganti dengan foto trofi kejuaraan asli (.jpg / .png)</text>
+</svg>

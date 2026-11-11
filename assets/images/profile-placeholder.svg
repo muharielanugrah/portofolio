@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="avatarGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </radialGradient>
+    <linearGradient id="cyberBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="200" height="200" rx="32" fill="url(#avatarGlow)" />
+  <rect width="196" height="196" x="2" y="2" rx="30" fill="none" stroke="url(#cyberBorder)" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Subtle Tech Grid Lines -->
+  <path d="M20 100 H180 M100 20 V180" stroke="#334155" stroke-width="0.75" stroke-dasharray="4 4" stroke-opacity="0.5"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3"/>
+
+  <!-- Tech Silhouette Silhouette -->
+  <!-- Head -->
+  <circle cx="100" cy="74" r="32" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+  <!-- Shield Badge on chest -->
+  <path d="M100 60 L115 67 V82 C115 91 108 99 100 102 C92 99 85 91 85 82 V67 Z" fill="#080C14" stroke="#38BDF8" stroke-width="1.5"/>
+  <path d="M96 79 L100 83 L106 74" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Shoulders / Torso -->
+  <path d="M46 168 C46 128 72 120 100 120 C128 120 154 128 154 168" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+
+  <!-- Monogram Initials Tag -->
+  <rect x="74" y="152" width="52" height="20" rx="6" fill="#080C14" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="100" y="166" fill="#F8FAFC" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">MAA</text>
+
+  <!-- Corner Security Anchors -->
+  <path d="M12 24 V12 H24 M176 12 H188 V24 M188 176 V188 H176 M24 188 H12 V176" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+</svg>
+

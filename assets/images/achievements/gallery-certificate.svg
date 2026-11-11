@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#0A101D"/>
+      <stop offset="100%" stop-color="#060A12"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <pattern id="certGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#certBg)"/>
+  <rect width="800" height="600" fill="url(#certGrid)"/>
+
+  <!-- Certificate Outer Frame -->
+  <rect x="50" y="40" width="700" height="520" rx="20" fill="#0B132B" stroke="#334155" stroke-width="2"/>
+  <rect x="65" y="55" width="670" height="490" rx="14" fill="#080E1E" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Corner Ornaments -->
+  <path d="M 75 95 L 75 75 L 95 75" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+  <path d="M 725 95 L 725 75 L 705 75" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+  <path d="M 75 505 L 75 525 L 95 525" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+  <path d="M 725 505 L 725 525 L 705 525" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+
+  <!-- Certificate Header Seal -->
+  <circle cx="400" cy="150" r="46" fill="#1E293B" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="400" cy="150" r="38" fill="#0B132B"/>
+  <path d="M385 155 L400 135 L415 155 L390 142 L410 142 Z" fill="url(#goldGrad)"/>
+  <circle cx="400" cy="158" r="4" fill="url(#goldGrad)"/>
+
+  <!-- Typography -->
+  <text x="400" y="235" font-family="'JetBrains Mono', monospace" font-size="12" fill="#38BDF8" font-weight="600" text-anchor="middle" letter-spacing="4">OFFICIAL MERIT RECOGNITION</text>
+  <text x="400" y="280" font-family="'Manrope', sans-serif" font-size="28" fill="#FFFFFF" font-weight="700" text-anchor="middle">SERTIFIKAT PENGHARGAAN</text>
+  <text x="400" y="315" font-family="'Manrope', sans-serif" font-size="14" fill="#94A3B8" text-anchor="middle">Dokumentasi Sertifikat Juara &amp; Apresiasi Marching Band</text>
+
+  <!-- Decorative Separator -->
+  <line x1="280" y1="340" x2="520" y2="340" stroke="url(#cyanGrad)" stroke-width="2"/>
+  <circle cx="400" cy="340" r="5" fill="#38BDF8"/>
+
+  <!-- Slot Info -->
+  <rect x="220" y="375" width="360" height="90" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="410" font-family="'JetBrains Mono', monospace" font-size="12" fill="#FCD34D" font-weight="600" text-anchor="middle">SLOT DOKUMENTASI SERTIFIKAT</text>
+  <text x="400" y="435" font-family="'Manrope', sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Siap diganti dengan file pindaian sertifikat asli (.jpg / .png)</text>
+
+  <!-- Footer Tags -->
+  <text x="400" y="515" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B" text-anchor="middle">DRUM CORPS MAKASSAR • MTS YMPI RAPPANG • BMBC • MIMF • HB CUP</text>
+</svg>

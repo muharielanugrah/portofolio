@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1D"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <pattern id="certGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="850" fill="url(#darkBg)" rx="16"/>
+  <rect width="1200" height="850" fill="url(#certGrid)" rx="16"/>
+
+  <!-- Ornate Outer Gold Borders -->
+  <rect x="35" y="35" width="1130" height="780" rx="12" fill="none" stroke="url(#goldGradient)" stroke-width="3" stroke-opacity="0.9"/>
+  <rect x="48" y="48" width="1104" height="754" rx="8" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <rect x="58" y="58" width="1084" height="734" rx="6" fill="none" stroke="url(#goldGradient)" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Corner Security Anchors -->
+  <g fill="none" stroke="url(#goldGradient)" stroke-width="3">
+    <!-- Top-Left -->
+    <path d="M 40 85 L 85 85 L 85 40"/>
+    <circle cx="85" cy="85" r="5" fill="#F59E0B"/>
+    <!-- Top-Right -->
+    <path d="M 1160 85 L 1115 85 L 1115 40"/>
+    <circle cx="1115" cy="85" r="5" fill="#F59E0B"/>
+    <!-- Bottom-Left -->
+    <path d="M 40 765 L 85 765 L 85 810"/>
+    <circle cx="85" cy="765" r="5" fill="#F59E0B"/>
+    <!-- Bottom-Right -->
+    <path d="M 1160 765 L 1115 765 L 1115 810"/>
+    <circle cx="1115" cy="765" r="5" fill="#F59E0B"/>
+  </g>
+
+  <!-- Header Section -->
+  <g text-anchor="middle" font-family="'Manrope', 'Segoe UI', sans-serif">
+    <!-- Top Monogram Seal -->
+    <circle cx="600" cy="140" r="38" fill="#0F172A" stroke="url(#goldGradient)" stroke-width="2.5"/>
+    <path d="M 600 115 L 610 135 L 632 138 L 616 154 L 620 176 L 600 165 L 580 176 L 584 154 L 568 138 L 590 135 Z" fill="url(#goldGradient)"/>
+    
+    <text x="600" y="215" fill="#94A3B8" font-size="14" letter-spacing="6" font-family="'JetBrains Mono', monospace" font-weight="600">OFFICIAL CERTIFICATE OF ACHIEVEMENT</text>
+    
+    <text x="600" y="275" fill="#F8FAFC" font-size="44" font-weight="800" letter-spacing="1">JAKARTA DRUM CORPS INTERNATIONAL</text>
+    <text x="600" y="310" fill="#38BDF8" font-size="16" letter-spacing="4" font-family="'JetBrains Mono', monospace" font-weight="600">INTERNATIONAL MARCHING BAND COMPETITION</text>
+
+    <!-- Divider Line -->
+    <line x1="420" y1="340" x2="780" y2="340" stroke="url(#goldGradient)" stroke-width="2"/>
+    <polygon points="600,335 608,340 600,345 592,340" fill="#F59E0B"/>
+
+    <!-- Award Description -->
+    <text x="600" y="385" fill="#94A3B8" font-size="16" font-style="italic">Sertifikat ini secara resmi dianugerahkan kepada:</text>
+
+    <!-- Recipient Name -->
+    <text x="600" y="450" fill="#F8FAFC" font-size="42" font-weight="800" letter-spacing="1.5">MUH. ARIEL ANUGRAH</text>
+    <line x1="360" y1="475" x2="840" y2="475" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Award Title -->
+    <rect x="410" y="505" width="380" height="54" rx="27" fill="#0F172A" stroke="url(#goldGradient)" stroke-width="2"/>
+    <text x="600" y="540" fill="url(#goldGradient)" font-size="22" font-weight="800" letter-spacing="2" font-family="'JetBrains Mono', monospace">JUARA 6 (6TH PLACE WINNER)</text>
+
+    <text x="600" y="605" fill="#CBD5E1" font-size="16" max-width="800">
+      Atas pencapaian prestasi dan dedikasi musikalitas seksi perkusi cymbal terbaik
+    </text>
+    <text x="600" y="630" fill="#94A3B8" font-size="14">
+      pada kategori Drum Battle / Jakarta Drum Corps International 2025
+    </text>
+  </g>
+
+  <!-- Signatures & Official Validation Footer -->
+  <g font-family="'Manrope', 'Segoe UI', sans-serif" font-size="13" fill="#94A3B8">
+    <!-- Left: Competition Committee -->
+    <line x1="160" y1="730" x2="380" y2="730" stroke="#334155" stroke-width="1.5"/>
+    <text x="270" y="750" text-anchor="middle" font-weight="600" fill="#F8FAFC">Dewan Juri Internasional</text>
+    <text x="270" y="770" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace">Adjudicator Board</text>
+
+    <!-- Center: Gold Foil Badge -->
+    <g transform="translate(600, 725)">
+      <circle cx="0" cy="0" r="42" fill="#0F172A" stroke="url(#goldGradient)" stroke-width="3"/>
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4 3"/>
+      <path d="M 0 -22 L 6 -6 L 22 -6 L 10 4 L 14 20 L 0 10 L -14 20 L -10 4 L -22 -6 L -6 -6 Z" fill="url(#goldGradient)"/>
+      <text x="0" y="27" text-anchor="middle" font-size="7" font-weight="700" fill="#FCD34D" font-family="'JetBrains Mono', monospace" letter-spacing="1">VERIFIED</text>
+    </g>
+
+    <!-- Right: Organizing Chairman -->
+    <line x1="820" y1="730" x2="1040" y2="730" stroke="#334155" stroke-width="1.5"/>
+    <text x="930" y="750" text-anchor="middle" font-weight="600" fill="#F8FAFC">Panitia Penyelenggara</text>
+    <text x="930" y="770" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace">Organizing Committee (JDCI)</text>
+  </g>
+
+  <!-- Bottom Verification Code -->
+  <text x="600" y="820" text-anchor="middle" font-size="10" font-family="'JetBrains Mono', monospace" fill="#64748B" letter-spacing="2">
+    DOCUMENT ID: CERT-JDCI-6TH-MAA • RESMI TERVERIFIKASI
+  </text>
+</svg>
+

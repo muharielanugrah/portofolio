@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="35%" stop-color="#F59E0B"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <radialGradient id="stageSpotlight" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#060A12"/>
+    </radialGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="600" fill="url(#stageSpotlight)" rx="16"/>
+  <rect width="796" height="596" x="2" y="2" rx="14" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Ambient Glow Behind Trophy -->
+  <circle cx="400" cy="270" r="160" fill="#F59E0B" fill-opacity="0.12" filter="blur(24px)"/>
+
+  <!-- Stage Pedestal Base -->
+  <polygon points="260,510 540,510 570,550 230,550" fill="#090D16" stroke="#334155" stroke-width="2"/>
+  <rect x="290" y="470" width="220" height="40" rx="4" fill="#0F172A" stroke="url(#gold3D)" stroke-width="2"/>
+  <text x="400" y="495" fill="url(#gold3D)" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">1ST PLACE • CHAMPION</text>
+
+  <!-- Main Championship Trophy Cup -->
+  <!-- Base Stem -->
+  <path d="M 380 400 L 420 400 L 415 470 L 385 470 Z" fill="url(#gold3D)"/>
+  <ellipse cx="400" cy="400" rx="35" ry="10" fill="url(#gold3D)"/>
+
+  <!-- Cup Body -->
+  <path d="M 310 180 C 310 330 350 380 400 380 C 450 380 490 330 490 180 Z" fill="url(#gold3D)" stroke="#FEF08A" stroke-width="1.5"/>
+  <ellipse cx="400" cy="180" rx="90" ry="20" fill="#F59E0B" stroke="#FEF08A" stroke-width="2"/>
+  <ellipse cx="400" cy="180" rx="78" ry="14" fill="#78350F"/>
+
+  <!-- Trophy Handles -->
+  <path d="M 315 210 C 220 210 220 310 330 330" fill="none" stroke="url(#gold3D)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 485 210 C 580 210 580 310 470 330" fill="none" stroke="url(#gold3D)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Gold Star on Cup -->
+  <path d="M 400 240 L 407 257 L 425 258 L 411 270 L 415 288 L 400 278 L 385 288 L 389 270 L 375 258 L 393 257 Z" fill="#FEF08A"/>
+
+  <!-- Medal Alongside Trophy -->
+  <g transform="translate(560, 360)">
+    <!-- Ribbon -->
+    <polygon points="-25,-90 0,-40 -15,-40 -35,-90" fill="#DC2626"/>
+    <polygon points="25,-90 0,-40 15,-40 35,-90" fill="#2563EB"/>
+    <polygon points="-12,-90 0,-40 12,-90" fill="#FFFFFF"/>
+    <!-- Medal Circle -->
+    <circle cx="0" cy="0" r="42" fill="url(#gold3D)" stroke="#FEF08A" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="34" fill="#78350F"/>
+    <text x="0" y="8" fill="url(#gold3D)" font-family="'Manrope', sans-serif" font-size="24" font-weight="900" text-anchor="middle">6</text>
+    <text x="0" y="24" fill="#FEF08A" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="1">JDCI</text>
+  </g>
+
+  <!-- Top Event Title Banner -->
+  <g text-anchor="middle" font-family="'Manrope', sans-serif">
+    <rect x="180" y="40" width="440" height="42" rx="21" fill="#0A0F1D" stroke="#334155" stroke-width="1.5"/>
+    <text x="400" y="66" fill="#F8FAFC" font-size="14" font-weight="700" letter-spacing="1">JAKARTA DRUM CORPS INTERNATIONAL</text>
+    <text x="400" y="105" fill="#38BDF8" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600">OFFICIAL TROPHY &amp; MEDAL HONORS</text>
+  </g>
+
+  <!-- Bottom Details -->
+  <text x="400" y="580" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">
+    DOKUMENTASI PENGHARGAAN JUARA 6 • DRUM BATTLE JDCI 2025
+  </text>
+</svg>
+
