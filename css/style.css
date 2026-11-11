@@ -47,14 +47,24 @@ body {
   position: relative;
 }
 
-/* Subtle Engineering Clean Background */
+/* Subtle Engineering Vertical Grid Lines (Ref: BB Portfolio) */
 .engineering-grid {
-  background-color: var(--color-canvas);
+  background-image: linear-gradient(to right, rgba(51, 65, 85, 0.12) 1px, transparent 1px);
+  background-size: 80px 100%;
 }
 
-/* Ambient Glow Disabled (Solid Clean Minimalist) */
+/* Ambient Radial Glows (Ref: Kamil Ashfaq & MZ) */
 .hero-glow {
-  display: none;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(37, 99, 235, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
 }
 
 /* Typography Rules */
@@ -277,37 +287,37 @@ p, li {
 
 /* Gold Champion Highlight (7 Juara 1 Awards & Featured Card) */
 .award-gold {
-  background-color: #0F172A;
-  border: 1px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
   transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base), box-shadow 250ms var(--ease-base);
 }
 
 .award-gold:hover {
   transform: translateY(-2px);
-  border-color: rgba(245, 158, 11, 0.8);
-  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.5);
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.25);
 }
 
 .award-silver {
-  background-color: #0F172A;
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.06) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.25);
   transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base);
 }
 
 .award-silver:hover {
   transform: translateY(-2px);
-  border-color: rgba(148, 163, 184, 0.6);
+  border-color: rgba(148, 163, 184, 0.5);
 }
 
 .award-bronze {
-  background-color: #0F172A;
-  border: 1px solid rgba(180, 83, 9, 0.3);
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.06) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(180, 83, 9, 0.25);
   transition: transform 250ms var(--ease-base), border-color 250ms var(--ease-base);
 }
 
 .award-bronze:hover {
   transform: translateY(-2px);
-  border-color: rgba(180, 83, 9, 0.6);
+  border-color: rgba(180, 83, 9, 0.5);
 }
 
 /* Video Playlist Interactive Cards */
@@ -330,7 +340,7 @@ p, li {
    Dual-Focus Hero Cards (Technology vs Marching Band)
    ========================================================================== */
 .dual-card-tech {
-  background-color: #0F172A;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 10, 18, 0.95) 100%);
   border: 1px solid rgba(56, 189, 248, 0.35);
   transition: transform 300ms var(--ease-base), border-color 300ms var(--ease-base), box-shadow 300ms var(--ease-base);
 }
@@ -338,11 +348,11 @@ p, li {
 .dual-card-tech:hover {
   transform: translateY(-4px);
   border-color: #38BDF8 !important;
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 45px -12px rgba(56, 189, 248, 0.25);
 }
 
 .dual-card-band {
-  background-color: #0F172A;
+  background: linear-gradient(145deg, rgba(20, 24, 38, 0.95) 0%, rgba(10, 14, 24, 0.95) 100%);
   border: 1px solid rgba(245, 158, 11, 0.35);
   transition: transform 300ms var(--ease-base), border-color 300ms var(--ease-base), box-shadow 300ms var(--ease-base);
 }
@@ -350,7 +360,7 @@ p, li {
 .dual-card-band:hover {
   transform: translateY(-4px);
   border-color: #F59E0B !important;
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 45px -12px rgba(245, 158, 11, 0.25);
 }
 
 /* Print Styles for Resume Modal */
